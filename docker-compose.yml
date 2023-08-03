@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  ros2:
+    privileged: true
+    build: $ROS_BUILD_FOLDER
+    restart: always
+    env_file: ./.env
+    container_name: ros2
+    ports:
+      - $ROSBRIDGE_LOCAL_PORT:$ROSBRIDGE_EXPOSE_PORT
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw  #display
+      - $ROS_BUILD_FOLDER/ydlidar_ros2_driver:/production_ws/src/ydlidar_ros2_driver  #maps working dir to docker's (to remove on production)
+      #- $ROS_BUILD_FOLDER/config:/config
+      - /dev:/dev
+    tty: true
+    environment:
+      - DISPLAY 
+      #: unix$DISPLAY
+      #QT_X11_NO_MITSHM: 1
