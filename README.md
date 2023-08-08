@@ -40,4 +40,10 @@ The command format is :
    ros2 run ydlidar_ros2_driver ydlidar_ros2_driver_client or ros2 topic echo /scan
    ```
    
-For more info on running the lidar see https://github.com/YDLIDAR/ydlidar_ros2_driver 
+## Additional notes
+Installation files for ydlidar files taken from respective repositories:
+- https://github.com/YDLIDAR/YDLidar-SDK
+- https://github.com/YDLIDAR/ydlidar_ros2_driver 
+ydlidar_ros2_driver launcher files and ydlidar_ros2_driver_node.cpp has been modified for compatibility issues with ROS2 Humble. See https://github.com/YDLIDAR/ydlidar_ros2_driver/issues/21  
+  
+Regarding development installation for Rviz, upgrade is done from kisak-mesa to fix black screen issues with dockerized ROS Humble. See https://github.com/ros2/rviz/issues/948
