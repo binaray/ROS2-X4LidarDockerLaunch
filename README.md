@@ -39,7 +39,12 @@ The command format is :
    ```
    ros2 run ydlidar_ros2_driver ydlidar_ros2_driver_client or ros2 topic echo /scan
    ```
-   
+
+##### To launch rosbridge
+```
+ros2 launch rosbridge_server rosbridge_websocket.xml
+```
+
 ## Additional notes
 Installation files for ydlidar files taken from respective repositories:
 - https://github.com/YDLIDAR/YDLidar-SDK
