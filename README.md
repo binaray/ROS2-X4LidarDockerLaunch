@@ -5,7 +5,7 @@ ROS2 docker compose files for launching x4 Lidar
 For a Linux system, to show rviz2 window, xhost needs to be used to enable other processes to access the X11 server (this isn’t exactly secure, but for now it works). On terminal input the following to start the docker container:
 ```
 xhost local:root	# can be ommited if display is not needed
-sudo docker compose up	# add -d to run in background
+sudo docker compose up -d # to run in background
 ```
 To run a bash session on terminal:
 ```
@@ -42,7 +42,7 @@ The command format is :
 
 ##### To launch rosbridge
 ```
-ros2 launch rosbridge_server rosbridge_websocket.xml
+ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 ```
 
 ## Additional notes
