@@ -1,4 +1,4 @@
-# X4LidarDockerLaunch
+# X4 Lidar ROS2 DockerLaunch
 ROS2 docker compose files for launching x4 Lidar
 
 ## How to run
